@@ -1,0 +1,24 @@
+{
+  "processors": [],
+  "extends": [
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "tailwind"
+      ]
+    }],
+    "at-rule-no-vendor-prefix": null,
+    "color-named": null,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-empty-line-before": "never",
+    "declaration-colon-space-after": "always-single-line",
+    "declaration-colon-space-before": "never",
+    "max-nesting-depth": null,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": null,
+    "selector-max-id": null,
+    "value-no-vendor-prefix": null
+  }
+}

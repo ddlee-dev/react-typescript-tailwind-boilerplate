@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+  <title><![CDATA[Title]]></title>
+  <button>
+    <title><![CDATA[]]></title>
+    <value><![CDATA[Button]]></value>
+  </button>
+  <image src="assets/icons/logo512.png">
+    <alt_text><![CDATA[Icon Description]]></alt_text>
+  </image>
+</data>

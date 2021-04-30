@@ -1,0 +1,13 @@
+{
+  "title": "Title",
+  "button": {
+    "title": "",
+    "value": "Button"
+  },
+  "image": {
+    "$": {
+      "src": "assets/icons/logo512.png"
+    },
+    "alt_text": "Icon Description"
+  }
+}
