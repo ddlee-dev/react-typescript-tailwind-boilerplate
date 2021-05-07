@@ -6,6 +6,8 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   className?: string;
 }
 
-export const Image: FC<ImageProps> = ({ src, alt, className = '', ...props }) => {
-  return <img className={`w-auto h-auto ${className}`} src={src} alt={alt} {...props} />;
+const Image: FC<ImageProps> = ({ src, alt, className = '', ...props }) => {
+  return <img className={`${className}`} src={src} alt={alt} {...props} />;
 };
+
+export default Image;

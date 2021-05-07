@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, ChangeEvent } from 'react';
 import { nanoid } from 'nanoid';
 
 const theme = {
@@ -18,9 +18,10 @@ const theme = {
 
 export type ToggleProps = {
   label: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const Toggle: FC<ToggleProps> = ({ label }) => {
+const Toggle: FC<ToggleProps> = ({ label, onChange }) => {
   const [checked, updateCheck] = useState(false);
   const [uuid, updateUuid] = useState<string | undefined>(undefined);
   const dotStyles = checked ? theme.checked.dot : theme.unchecked.dot;
@@ -32,9 +33,14 @@ export const Toggle: FC<ToggleProps> = ({ label }) => {
     }
   }, [uuid]);
 
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    updateCheck(e.target.checked);
+    onChange(e);
+  };
+
   if (!uuid) return null;
   return (
-    <div className="flex items-center justify-center w-auto mb-12">
+    <div className="flex items-center justify-center w-auto">
       <label className="flex items-center cursor-pointer" htmlFor={uuid}>
         <div className={`${theme.default.background} ${backgroundStyles}`}>
           <div className={`${theme.default.dot} ${dotStyles}`} />
@@ -43,7 +49,7 @@ export const Toggle: FC<ToggleProps> = ({ label }) => {
             className="w-full h-full sr-only m-0"
             id={uuid}
             checked={checked}
-            onChange={(e) => updateCheck(e.target.checked)}
+            onChange={handleOnChange}
           />
         </div>
         <span className="sr-only">{label}</span>
@@ -51,3 +57,5 @@ export const Toggle: FC<ToggleProps> = ({ label }) => {
     </div>
   );
 };
+
+export default Toggle;

@@ -21,25 +21,23 @@ module.exports = {
       plugins: [require('tailwindcss'), require('autoprefixer')]
     }
   },
-  babel: {
-    plugins: ['@babel/plugin-syntax-jsx']
-  },
   webpack: {
     alias: {
-      components: path.resolve(__dirname, 'src/components/'),
-      utilities: path.resolve(__dirname, 'src/utilities/'),
-      styles: path.resolve(__dirname, 'src/styles/'),
-      state: path.resolve(__dirname, 'src/state/')
-    },
-    plugins: webpackPlugin
+      '@/components': path.resolve(__dirname, 'src/components/'),
+      '@/containers': path.resolve(__dirname, 'src/containers/'),
+      '@/utils': path.resolve(__dirname, 'src/utils/'),
+      '@/styles': path.resolve(__dirname, 'src/styles/'),
+      '@/xstate': path.resolve(__dirname, 'src/xstate/')
+    }
   },
   jest: {
     configure: {
       moduleNameMapper: {
-        '^components(.*)$': '<rootDir>/src/components$1',
-        '^utilities(.*)$': '<rootDir>/src/utilities$1',
-        '^styles(.*)$': '<rootDir>/src/styles$1',
-        '^state(.*)$': '<rootDir>/src/state$1'
+        '^@/components(.*)$': '<rootDir>/src/components$1',
+        '^@/containers(.*)$': '<rootDir>/src/containers$1',
+        '^@/utils(.*)$': '<rootDir>/src/utils$1',
+        '^@/styles(.*)$': '<rootDir>/src/styles$1',
+        '^@/xstate(.*)$': '<rootDir>/src/xstate$1'
       },
       collectCoverage: true,
       collectCoverageFrom: [
