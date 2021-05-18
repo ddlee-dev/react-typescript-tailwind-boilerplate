@@ -2886,10 +2886,10 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^15.0.1":
-  version "15.0.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
-  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
+"@types/node@*", "@types/node@^15.3.0":
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.3.0.tgz#d6fed7d6bc6854306da3dea1af9f874b00783e26"
+  integrity sha512-8/bnjSZD86ZfpBsDlCIkNXIvm+h6wi9g7IqL+kmFkQ+Wvu3JrasgLElfiPgoo8V8vVfnEi0QVS12gbl94h9YsQ==
 
 "@types/node@^14.0.10":
   version "14.14.43"
@@ -9389,11 +9389,6 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
-lodash.flatten@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
-  integrity sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
-
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -13749,16 +13744,16 @@ stylelint-config-recommended@^5.0.0:
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-5.0.0.tgz#fb5653f495a60b4938f2ad3e77712d9e1039ae78"
   integrity sha512-c8aubuARSu5A3vEHLBeOSJt1udOdS+1iue7BmJDTSXoCBmfEQmmWX+59vYIj3NQdJBY6a/QRv1ozVFpaB9jaqA==
 
-stylelint@^13.13.0:
-  version "13.13.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.13.0.tgz#1a33bffde765920ac985f16ae6250ff914b27804"
-  integrity sha512-jvkM1iuH88vAvjdKPwPm6abiMP2/D/1chbfb+4GVONddOOskHuCXc0loyrLdxO1AwwH6jdnjYskkTKHQD7cXwQ==
+stylelint@^13.13.1:
+  version "13.13.1"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-13.13.1.tgz#fca9c9f5de7990ab26a00f167b8978f083a18f3c"
+  integrity sha512-Mv+BQr5XTUrKqAXmpqm6Ddli6Ief+AiPZkRsIrAoUKFuq/ElkUh9ZMYxXD0iQNZ5ADghZKLOWz1h7hTClB7zgQ==
   dependencies:
     "@stylelint/postcss-css-in-js" "^0.37.2"
     "@stylelint/postcss-markdown" "^0.36.2"
     autoprefixer "^9.8.6"
     balanced-match "^2.0.0"
-    chalk "^4.1.0"
+    chalk "^4.1.1"
     cosmiconfig "^7.0.0"
     debug "^4.3.1"
     execall "^2.0.0"
@@ -13799,7 +13794,7 @@ stylelint@^13.13.0:
     style-search "^0.1.0"
     sugarss "^2.0.0"
     svg-tags "^1.0.0"
-    table "^6.5.1"
+    table "^6.6.0"
     v8-compile-cache "^2.3.0"
     write-file-atomic "^3.0.3"
 
@@ -13883,14 +13878,13 @@ symbol.prototype.description@^1.0.0:
     has-symbols "^1.0.1"
     object.getownpropertydescriptors "^2.1.2"
 
-table@^6.0.4, table@^6.5.1:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.6.0.tgz#905654b79df98d9e9a973de1dd58682532c40e8e"
-  integrity sha512-iZMtp5tUvcnAdtHpZTWLPF0M7AgiQsURR2DwmxnJwSy8I3+cY+ozzVvYha3BOLG2TB+L0CqjIz+91htuj6yCXg==
+table@^6.0.4, table@^6.6.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.7.0.tgz#26274751f0ee099c547f6cb91d3eff0d61d155b2"
+  integrity sha512-SAM+5p6V99gYiiy2gT5ArdzgM1dLDed0nkrWmG6Fry/bUS/m9x83BwpJUOf1Qj/x2qJd+thL6IkIx7qPGRxqBw==
   dependencies:
     ajv "^8.0.1"
     lodash.clonedeep "^4.5.0"
-    lodash.flatten "^4.4.0"
     lodash.truncate "^4.4.2"
     slice-ansi "^4.0.0"
     string-width "^4.2.0"
@@ -14846,10 +14840,10 @@ webidl-conversions@^6.1.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
-webpack-bundle-analyzer@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.4.1.tgz#c71fb2eaffc10a4754d7303b224adb2342069da1"
-  integrity sha512-j5m7WgytCkiVBoOGavzNokBOqxe6Mma13X1asfVYtKWM3wxBiRRu1u1iG0Iol5+qp9WgyhkMmBAcvjEfJ2bdDw==
+webpack-bundle-analyzer@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.4.2.tgz#39898cf6200178240910d629705f0f3493f7d666"
+  integrity sha512-PIagMYhlEzFfhMYOzs5gFT55DkUdkyrJi/SxJp8EF3YMWhS+T9vvs2EoTetpk5qb6VsCq02eXTlRDOydRhDFAQ==
   dependencies:
     acorn "^8.0.4"
     acorn-walk "^8.0.0"
