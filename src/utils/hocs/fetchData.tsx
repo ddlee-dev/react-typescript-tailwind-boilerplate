@@ -1,15 +1,11 @@
 import { ComponentType, useState, useEffect } from 'react';
-import { useMachine } from '@xstate/react';
-import { themeMachine } from 'state/machines/themeToggle';
-import { publicPath, loadData } from 'utilities/data';
-import { Button } from 'components/Button/Button';
+import { publicPath, loadData } from '@/utils/data';
 
 // eslint-disable-next-line
 type WrappComponentType = ComponentType<any>;
 
 export const fetchData = (WrappedComponent: WrappComponentType, filePath = '') => {
   return (props: Record<string, unknown>): JSX.Element => {
-    const [current, send] = useMachine(themeMachine);
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState<boolean | Record<string, unknown>>(false);
     const dataFilePath = publicPath(filePath);
@@ -17,10 +13,10 @@ export const fetchData = (WrappedComponent: WrappComponentType, filePath = '') =
     useEffect(() => {
       const fetchFileData = async () => {
         try {
-          const data = await loadData(dataFilePath);
-          if (data) {
+          const fetchedData = await loadData(dataFilePath);
+          if (fetchedData) {
             setLoading(false);
-            setData(data);
+            setData(fetchedData);
           }
         } catch (err) {
           setLoading(false);
@@ -31,11 +27,8 @@ export const fetchData = (WrappedComponent: WrappComponentType, filePath = '') =
       fetchFileData();
     }, [dataFilePath]);
 
-    return (
-      <>
-        <WrappedComponent {...props} loading={loading} data={data} />
-        <Button onClick={() => send('TOGGLE_THEME')}>{current.value}</Button>
-      </>
-    );
+    // if (loading) return <></>;
+    // if (!loading && !data) return <></>;
+    return <WrappedComponent {...props} loading={loading} data={data} />;
   };
 };

@@ -1,12 +1,12 @@
 import { createMachine } from 'xstate';
-import { userTheme, setThemeToLocalStorage } from 'utilities/style';
+import { setThemeToLocalStorage } from '@/utils/theme';
 
 type ThemeContext = Record<string, unknown>;
 
 export const themeMachine = createMachine<ThemeContext>(
   {
     id: 'theme_preference',
-    initial: userTheme(),
+    initial: 'light',
     states: {
       dark: {
         on: {
