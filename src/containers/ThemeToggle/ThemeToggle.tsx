@@ -28,7 +28,7 @@ const theme = {
     dot:
       'dot absolute left-0 w-[22px] h-[22px] shadow rounded-full transition duration-150 ease-in-out transform focus:outline-none focus:ring focus:border-[#7BAAFA]',
     background: 'relative block w-[50px] h-[24px] rounded-full transition duration-150 ease-in-out',
-    icon: 'absolute top-[1px] text-sm'
+    icon: 'absolute top-[0px] text-sm leading-4 h-[22px] flex justify-center items-center'
   },
   checked: {
     dot: 'translate-x-[26px] bg-white',
