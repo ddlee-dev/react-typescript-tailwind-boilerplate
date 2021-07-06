@@ -2,10 +2,11 @@ import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './pages/main/MainPage';
-import './styles/global.css';
+import GlobalStyles from './styles/global';
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyles />
     <Main />
   </React.StrictMode>,
   document.getElementById('root')

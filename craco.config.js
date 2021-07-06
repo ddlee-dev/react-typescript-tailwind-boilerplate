@@ -16,6 +16,9 @@ module.exports = {
   eslint: {
     mode: ESLINT_MODES.file
   },
+  babel: {
+    plugins: ['babel-plugin-styled-components']
+  },
   style: {
     postcss: {
       plugins: [require('tailwindcss'), require('autoprefixer')]

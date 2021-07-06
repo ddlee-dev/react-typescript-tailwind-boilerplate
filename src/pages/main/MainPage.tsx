@@ -21,9 +21,9 @@ const MainPage: FC<MainPageProps> = ({ loading, data }) => {
 
   return (
     <Layout>
-      <div className="flex flex-nowrap items-center justify-center">
-        <h3 className="w-max mr-2">{title}</h3>
-        <Image className="w-10 h-10" src={image.$.src} alt={image.alt_text} />
+      <div tw="flex flex-nowrap items-center justify-center">
+        <h3 tw="w-max mr-2">{title}</h3>
+        <Image tw="w-10 h-10" src={image.$.src} alt={image.alt_text} />
         <Button>{button.value}</Button>
         <ThemeToggle />
       </div>

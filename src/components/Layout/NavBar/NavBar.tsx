@@ -1,5 +1,6 @@
 import { FC } from 'react';
+import { NavStyled } from './NavBar.styled';
 
-const NavBar: FC = () => <nav className="flex w-full h-14 bg-[#20232a]"></nav>;
+const NavBar: FC = () => <NavStyled></NavStyled>;
 
 export default NavBar;
